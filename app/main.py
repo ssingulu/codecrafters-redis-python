@@ -6,7 +6,7 @@ def RESP_encoder_function(request_status):
 
 
 def generate_response(request):
-    RESP_encoder_function(request)
+    return RESP_encoder_function(request)
 
 
 def main():
