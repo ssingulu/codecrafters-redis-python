@@ -18,7 +18,7 @@ def main():
     server_socket = socket.create_server(("localhost", 6379), reuse_port=True)
     client_connection, _ = server_socket.accept() # wait for client
     request = client_connection.recv(1024)
-    return generate_response(request)
+    client_connection.send(generate_response(request))
 
 
 
